@@ -1,4 +1,4 @@
-from rest_framework import viewsets, filters
+from rest_framework import viewsets, filters, generics
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
@@ -50,7 +50,7 @@ class CommentViewSet(viewsets.ModelViewSet):
 
 class GroupViewSet(CustomViewSet):
     """
-    Метод для действий с группами (просмотр, создание).
+    Метод для действий с группами (просмотр, создание).CustomViewSet
     Доступна работа с конкретным постом, всеми постами.
     """
 

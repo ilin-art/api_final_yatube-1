@@ -20,9 +20,10 @@ router_v1.register('group', GroupViewSet, basename='groups')
 router_v1.register('follow', FollowViewSet, basename='followers')
 
 
+
 urlpatterns = [
-    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('v1/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('v1/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api-token-auth/', obtain_auth_token),
-    path('v1/', include(router_v1.urls))
+    path('v1/', include(router_v1.urls)),
 ]
